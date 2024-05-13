@@ -6,11 +6,21 @@
 #include <avr/io.h>
 
 /* Macros */
+#ifndef INPUT
 #define INPUT  (uint8_t)0
+#endif
+#ifndef OUTPUT
 #define OUTPUT (uint8_t)1
+#endif
+#ifndef LOW
 #define LOW    (uint8_t)0
+#endif
+#ifndef HIGH
 #define HIGH   (uint8_t)1
+#endif
+#ifndef TOGGLE
 #define TOGGLE (uint8_t)2
+#endif
 
 class GPIO
 {
