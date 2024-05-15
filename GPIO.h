@@ -7,19 +7,22 @@
 
 /* Macros */
 #ifndef INPUT
-#define INPUT  (uint8_t)0
+#define INPUT        (const uint8_t)0
 #endif
 #ifndef OUTPUT
-#define OUTPUT (uint8_t)1
+#define OUTPUT       (const uint8_t)1
+#endif
+#ifndef INPUT_PULLUP
+#define INPUT_PULLUP (const uint8_t)2
 #endif
 #ifndef LOW
-#define LOW    (uint8_t)0
+#define LOW          (const uint8_t)0
 #endif
 #ifndef HIGH
-#define HIGH   (uint8_t)1
+#define HIGH         (const uint8_t)1
 #endif
 #ifndef TOGGLE
-#define TOGGLE (uint8_t)2
+#define TOGGLE       (const uint8_t)2
 #endif
 
 class GPIO

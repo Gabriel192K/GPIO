@@ -47,6 +47,9 @@ const uint8_t GPIO::setMode(const uint8_t mode)
         case OUTPUT:
             *this->ddr = *this->ddr | (1 << this->bit);
             break;
+        case INPUT_PULLUP:
+            *this->ddr = *this->ddr & ~(1 << this->bit);
+            *this->dor = *this->dor | (1 << this->bit);
         default:
             return (0);
     }
