@@ -1,7 +1,7 @@
 /* Dependencies */
 #include "GPIO.h"
 
-/*!
+/**
  * @brief  GPIO constructor
  * @param  ddr
  *         The data direction register address
@@ -20,7 +20,7 @@ GPIO::GPIO(volatile uint8_t* ddr, volatile uint8_t* dor, volatile uint8_t* dir, 
     this->bit = bit;
 }
 
-/*!
+/**
  * @brief  GPIO destructor
  */
 GPIO::~GPIO()
@@ -31,7 +31,7 @@ GPIO::~GPIO()
     this->bit = 0xFF;
 }
 
-/*!
+/**
  * @brief  Setting the mode of operation of GPIO
  * @param  mode
  *         The mode of operation of GPIO
@@ -57,7 +57,7 @@ const uint8_t GPIO::setMode(const uint8_t mode)
     return (1);
 }
 
-/*!
+/**
  * @brief  Setting the state of GPIO
  * @param  state
  *         The state of GPIO
@@ -84,7 +84,7 @@ const uint8_t GPIO::write(const uint8_t state)
     return (1);
 }
 
-/*!
+/**
  * @brief  Reading the state of GPIO
  * @return The state of GPIO
  */
