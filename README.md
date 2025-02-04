@@ -9,7 +9,33 @@
 ## Tested on
 - ATmega328P @16MHz with `Arduino IDE` & `Microchip Studio IDE`.
 
-## Example Code
+## Example Code (Arduino)
+
+```cpp
+#include <GPIO.h>
+
+// Define the registers and bit for the GPIO pin
+#define DDRB_REG &DDRB
+#define PORTB_REG &PORTB
+#define PINB_REG &PINB
+#define PIN_BIT 5
+
+GPIO pin(DDRB_REG, PORTB_REG, PINB_REG, PIN_BIT);
+
+void setup(void)
+{
+    // Initialize pin as an output
+    pin.setMode(OUTPUT);
+}
+
+void loop(void)
+{
+    // Toggle the state of the pin
+    pin.write(TOGGLE);
+}
+```
+
+## Example Code (Microchip Studio)
 
 ```cpp
 #include <GPIO.h>
@@ -34,3 +60,4 @@ int main()
 
     return 0;
 }
+```
