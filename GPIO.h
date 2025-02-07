@@ -25,13 +25,13 @@
 #define TOGGLE       (const uint8_t)2
 #endif
 
-/**
+/*!
  * @brief GPIO class to control GPIO pins.
  */
 class GPIO
 {
     public:
-        /**
+        /*!
          * @brief Constructor: Initializes the GPIO object with the given DDR, DOR, DIR registers and bit.
          * @param ddr Data Direction Register
          * @param dor Data Output Register
@@ -40,36 +40,36 @@ class GPIO
          */
         GPIO(volatile uint8_t* ddr, volatile uint8_t* dor, volatile uint8_t* dir, const uint8_t bit);
 
-        /**
+        /*!
          * @brief Destructor: Cleans up the GPIO object.
          */
         ~GPIO();
 
-        /**
+        /*!
          * @brief Sets the mode of the GPIO pin (INPUT, OUTPUT, INPUT_PULLUP).
          * @param mode Mode to set
          * @return True if successful, otherwise false if mode was invalid
          */
         const uint8_t setMode(const uint8_t mode);
 
-        /**
+        /*!
          * @brief Writes a state to the GPIO pin (LOW, HIGH, TOGGLE).
          * @param state State to set
          * @return True if successful, otherwise false if state was invalid
          */
         const uint8_t write(const uint8_t state);
 
-        /**
+        /*!
          * @brief Reads the current state of the GPIO pin.
          * @return The state of the GPIO pin
          */
         const uint8_t read(void);
 
     private:
-        volatile uint8_t* ddr; /**< Data Direction Register */
-        volatile uint8_t* dor; /**< Data Output Register */
-        volatile uint8_t* dir; /**< Data Input Register */
-        uint8_t bit;           /**< Bit position in the registers */
+        volatile uint8_t* ddr; /*!< Data Direction Register */
+        volatile uint8_t* dor; /*!< Data Output Register */
+        volatile uint8_t* dir; /*!< Data Input Register */
+        uint8_t bit;           /*!< Bit position in the registers */
 };
 
 #endif
